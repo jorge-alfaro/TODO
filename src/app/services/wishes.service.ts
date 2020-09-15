@@ -17,4 +17,10 @@ export class WishesService {
     console.log(this.lists);
 
    }
+
+
+   crearList( titulo: string) {
+    const newList = new List(titulo);
+    this.lists.push( newList );
+   }
 }
