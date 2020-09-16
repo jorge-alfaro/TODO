@@ -10,8 +10,11 @@
  <ion-list>
    <ion-item *ngFor="let list of wishesService.lists"
              detail
-             >
+             (click)="listaSelected( list )">
   <ion-label>{{ list.titulo }}</ion-label>
+
+  <ion-note slot="end" color="tertiary">{{ list.items.length }} items</ion-note>
+
    </ion-item>
  </ion-list>
 
