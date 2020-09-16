@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { AlertController } from '@ionic/angular';
 import { WishesService } from '../../services/wishes.service';
-import { List } from '../../models/list.model';
 
 @Component({
   selector: 'app-tab1',
@@ -55,10 +54,6 @@ export class Tab1Page {
     });
 
     alert.present();
-  }
-
-  listaSelected( list: List ) {
-    this.router.navigateByUrl(`/tabs/tab1/agregar/${ list.id }`);
   }
 
 }
