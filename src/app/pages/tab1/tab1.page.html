@@ -8,18 +8,8 @@
 
 <ion-content>
 
- <app-lists></app-lists>
+ <app-lists [terminada]="false"></app-lists>
 
- <ion-list>
-   <ion-item *ngFor="let list of wishesService.lists"
-             detail
-             (click)="listaSelected( list )">
-  <ion-label>{{ list.titulo }}</ion-label>
-
-  <ion-note slot="end" color="tertiary">{{ list.items.length }} items</ion-note>
-
-   </ion-item>
- </ion-list>
 
    <!-- fab placed to the top end -->
    <ion-fab vertical="bottom" horizontal="end" slot="fixed">
